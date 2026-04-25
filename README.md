@@ -1,112 +1,177 @@
-📧 AI-Based Email Spam Classification (SpamSense)
-🚀 Overview
 
-SpamSense is a full-stack web application that classifies email/SMS messages as Spam or Ham (Not Spam) using a lightweight machine learning-inspired heuristic model.
 
-The project features a modern dashboard-style UI and a Flask-based backend API for real-time classification.
+# 📧 AI-Based Email Spam Classification System
 
-🧠 Features
-📩 Real-time spam detection
-🌐 REST API using Flask
-💻 Interactive frontend dashboard
-⚡ Fast keyword-based classification
-📊 Confidence score display
-🔄 Cross-Origin support (CORS enabled)
-🏗️ Project Structure
-Ai-based-email-classification-main/
+## 🚀 Overview
+
+This project is a **full-stack AI-powered email and SMS spam classification system** that combines **machine learning** with **real-time heuristic analysis**. It provides an interactive dashboard where users can classify messages, view history, and analyze spam detection performance.
+
+The application is built using:
+
+* **Frontend:** HTML, CSS, JavaScript (Single Page Application)
+* **Backend:** Python Flask
+* **Machine Learning:** NLP-based classification model
+
+---
+
+## ✨ Features
+
+* 🔍 Real-time email/SMS spam detection
+* 📊 Interactive dashboard with analytics
+* 🧠 Machine Learning-based classification
+* 📜 Classification history tracking
+* 🌙 Dark terminal-style UI
+* ⚡ Fast and responsive SPA design
+
+---
+
+## 🏗️ Project Structure
+
+```
+AI-based-email-classification/
 │
-├── app.py              # Flask backend API
-├── index.html          # Frontend UI
-├── style.css           # Styling
-├── script.js           # Frontend logic
-├── requirements.txt    # Python dependencies
-├── LICENSE
-└── README.md
-⚙️ Technologies Used
-Python (Flask)
-HTML, CSS, JavaScript
-REST API
-VS Code (recommended IDE)
-🧪 How It Works
+├── static/                # CSS, JS, frontend assets
+├── templates/             # HTML files
+├── model/                 # Trained ML model files
+├── app.py                 # Flask backend
+├── requirements.txt       # Python dependencies
+└── README.md              # Project documentation
+```
 
-The backend analyzes input text using predefined spam keywords such as:
+---
 
-"win"
-"free"
-"money"
-"urgent"
+## ⚙️ Requirements
 
-Based on keyword matches, it calculates:
+Make sure you have the following installed:
 
-Spam probability
-Ham probability
-Confidence score
-🖥️ How to Run the Project in VS Code
-🔹 Step 1: Download the Project
-Clone the repository:
-git clone https://github.com/your-username/your-repo-name.git
+* Python 3.8+
+* pip (Python package manager)
+* VS Code (recommended)
 
-OR download ZIP and extract.
+---
 
-🔹 Step 2: Open in VS Code
-Open VS Code
-Click File → Open Folder
-Select the project folder
-🔹 Step 3: Create Virtual Environment (Recommended)
+## 🧑‍💻 How to Run in VS Code
+
+### Step 1: Extract Project
+
+* Download or clone the repository
+
+```bash
+git clone https://github.com/your-username/AI-based-email-classification.git
+```
+
+* Open the folder in **VS Code**
+
+---
+
+### Step 2: Create Virtual Environment (Recommended)
+
+```bash
 python -m venv venv
+```
 
 Activate it:
 
-Windows:
+**Windows:**
+
+```bash
 venv\Scripts\activate
-🔹 Step 4: Install Dependencies
+```
+
+**Mac/Linux:**
+
+```bash
+source venv/bin/activate
+```
+
+---
+
+### Step 3: Install Dependencies
+
+```bash
 pip install -r requirements.txt
-🔹 Step 5: Run Flask Server
+```
+
+---
+
+### Step 4: Run Flask Application
+
+```bash
 python app.py
+```
 
-You should see:
+---
 
-SpamSense API Running
-🔹 Step 6: Open Frontend
-Open index.html in your browser
-OR
-Use VS Code Live Server extension
-🔗 API Endpoint
-POST /api/classify
-Request:
-{
-  "text": "You won free money!"
-}
-Response:
-{
-  "is_spam": true,
-  "spam_probability": 80,
-  "ham_probability": 20,
-  "confidence": 80,
-  "confidence_label": "High",
-  "signals": [],
-  "model_used": "Basic Model"
-}
-📸 Screenshots (Optional)
+### Step 5: Open in Browser
 
-Add your UI screenshots here
+Go to:
 
-📌 Future Improvements
-Integrate ML models (Naive Bayes, SVM)
-Add database for history tracking
-Improve UI/UX design
-Deploy on cloud (Heroku / Render)
-👨‍💻 Author
-Your Name
-📜 License
+```
+http://127.0.0.1:5000/
+```
 
-This project is licensed under the MIT License.
+---
 
-⭐ Contributing
+## 🧪 How It Works
 
-Contributions are welcome! Feel free to fork this repo and submit a pull request.
+1. User enters email/SMS text
+2. Text is processed using NLP techniques
+3. Machine learning model predicts:
 
-💡 Notes for Users
-Ensure Python is installed (version 3.7+ recommended)
-If port 10000 is busy, modify it in app.py
-Use tools like Postman for API testing
+   * Spam ❌
+   * Not Spam ✅
+4. Results are displayed with probability
+
+---
+
+## 📊 Technologies Used
+
+* Python (Flask)
+* Machine Learning (Naive Bayes / NLP)
+* HTML5, CSS3, JavaScript
+* Bootstrap (optional UI styling)
+
+
+
+
+## 🛠️ Troubleshooting
+
+### ❌ Emoji Syntax Error in Python
+
+If you see:
+
+```
+SyntaxError: invalid character '🚫'
+```
+
+👉 Fix: Replace emojis inside Python strings with plain text or use encoding:
+
+```python
+result = "SPAM"
+```
+
+---
+
+### ❌ File Not Found Error
+
+Make sure model files exist:
+
+```
+model/nb_model.pkl
+```
+
+---
+
+## 📈 Future Improvements
+
+* Add deep learning models (LSTM, BERT)
+* Deploy using cloud (AWS / Heroku)
+* Add user authentication
+* Real-time email integration
+
+---
+
+## 🤝 Contribution
+
+Contributions are welcome! Feel free to fork the repo and submit pull requests.
+
